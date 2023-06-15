@@ -12,7 +12,7 @@ const port = process.env.PORT;
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req: Request, res: Response) => {
-  const language = req.headers["accept-language"].split(",")[0];
+  const language = req.headers["accept-language"]?.split(",")[0];
   switch (language) {
     case "ko":
       res.redirect("/ko");

@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     var _a;
     const language = (_a = req.headers["accept-language"]) === null || _a === void 0 ? void 0 : _a.split(",")[0];
-    console.log(language);
+    console.log(req);
     switch (language) {
         case "ko":
             res.redirect("/ko");

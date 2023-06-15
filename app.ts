@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req: Request, res: Response) => {
   const language = req.headers["accept-language"]?.split(",")[0];
-  console.log(language);
+  console.log(req.headers);
   switch (language) {
     case "ko":
       res.redirect("/ko");
@@ -32,9 +32,13 @@ app.get("/ko", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "view/ko.html"));
 });
 
-// app.get("/", (req: Request, res: Response) => {
-//   res.sendFile(path.join(__dirname, "view/index.html"));
-// });
+app.use(function (req, res, next) {
+  res.status(404).sendFile(path.join(__dirname, "view/404.html"));
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).sendFile(path.join(__dirname, "view/error.html"));
+});
 
 app.listen(port, () => {
   console.log(`${port}에서 서버 열림`);

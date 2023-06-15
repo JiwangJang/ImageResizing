@@ -7,7 +7,9 @@ dotenv.config({ path: path.join(__dirname, ".env") });
 const port = process.env.PORT;
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
-    const language = req.headers["accept-language"].split(",")[0];
+    var _a;
+    const language = (_a = req.headers["accept-language"]) === null || _a === void 0 ? void 0 : _a.split(",")[0];
+    console.log(language);
     switch (language) {
         case "ko":
             res.redirect("/ko");

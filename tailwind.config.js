@@ -25,7 +25,7 @@ module.exports = {
         "ko-share": "ko-share",
       },
       fontSize: {
-        article: "30px",
+        article: "40px",
         "article-ko": "28px",
         "70px": "70px",
         "42px": "42px",

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="MBkphLQAzeNpjPLl-zpIgFerLomK1Ah96Z2IElRmWWQ"
+    />
+    <meta name="description" content="Compress Your Image Fastly!" />
+    <link rel="icon" href="/favicon.png" />
+    <meta property="og:url" content="https://imagecompresser.net/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Fastest Imagecompressor" />
+    <meta property="og:description" content="Compress Your Image Fastly!" />
+    <meta property="og:image" content="/svg/lightning.svg" />
+    <meta property="fb:app_id" content="804086021269513" />
+    <title>The Fastest Imagecompressor</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-J4HJCKP67Y"
+  ></script>
+  <script
+    async
+    defer
+    crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-J4HJCKP67Y");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: "804086021269513",
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: "v17.0",
+      });
+    };
+  </script>
+  <body class="bg-slate-300">
+    <div
+      id="drop-area"
+      class="z-20 w-full h-full fixed flex top-0 justify-center items-center text-8xl font-ko-title drop-area-ko"
+    ></div>
+    <div
+      id="congratulations"
+      class="text-6xl font-ko-title fixed flex justify-center items-center shadow-2xl z-30 invisible"
+    >
+      🎉레벨업 축하드립니다!🎉
+    </div>
+    <!-- Content -->
+    <div
+      class="bg-white h-auto w-ContentWidth pb-5 mb-5 mx-auto pt-4 rounded-xl"
+      id="content-container"
+    >
+      <!-- TitleSvg -->
+      <header class="border-b">
+        <img
+          src="svg/ImageCompresserIcon.svg"
+          alt="Title"
+          width="1000px"
+          height="300px"
+        />
+      </header>
+      <!-- We focus on speed -->
+      <h1
+        class="font-ko-title w-full h-auto flex items-center justify-center text-70px"
+        id="We-focus-on-speed-ko"
+      >
+        우리는 <u class="pl-4">속도</u>에 집중합니다!
+      </h1>
+      <!-- Here our site's feature -->
+      <p
+        class="font-ko-title w-full h-auto flex items-center justify-center text-6xl"
+        id="feature-explain-ko"
+      >
+        ⬇️아래는 우리페이지의 기능입니다!⬇️
+      </p>
+      <!-- Site's Feature -->
+      <div
+        class="grid grid-rows-2 grid-cols-2 w-4/5 mx-auto mt-6 mb-0 font-ko-title text-article-ko cursor-pointer"
+        title="Don't you want to know why?"
+      >
+        <div
+          class="flex items-center flex-col border-b-2 pb-3 z-20 hover:bg-slate-100"
+          id="private"
+        >
+          <img
+            src="/svg/private.svg"
+            alt="private-feature"
+            width="130px"
+            height="130px"
+          />
+          <p class="text-center">
+            지금 이 사이트를 이용하고 있는 <u>당신</u>말고는 아무도 사진을 볼 수
+            없습니다!
+          </p>
+        </div>
+        <div
+          class="flex items-center flex-col border-l-2 border-b-2 pb-3 z-20 hover:bg-slate-100"
+          id="saving"
+        >
+          <img
+            src="/svg/saving.svg"
+            alt="saving-feature"
+            width="130px"
+            height="130px"
+          />
+          <p class="text-center">
+            우리는 당신이 이런 의미없는거에 신경쓰게 하고싶지 않습니다!
+            <br />당신의 <u>에너지</u>는 소중하니까요!
+          </p>
+        </div>
+        <div
+          class="flex items-center flex-col z-20 hover:bg-slate-100"
+          id="infinite"
+        >
+          <img
+            src="/svg/infinite.svg"
+            alt="infinite-feature"
+            width="130px"
+            height="130px"
+          />
+          <p class="text-center">
+            당신이 원하는 만큼 <br /><u>무제한, 무료로</u> 이용가능합니다!
+          </p>
+        </div>
+        <div
+          class="flex items-center flex-col border-l-2 z-20 hover:bg-slate-100"
+          id="speed"
+        >
+          <img
+            src="/svg/speed.svg"
+            alt="speed-feature"
+            width="130px"
+            height="130px"
+          />
+          <p class="text-center">
+            용량을 줄이는데 기다리실 필요가 없습니다! 엄청나게
+            <u>빠르니까요</u>!
+          </p>
+        </div>
+      </div>
+      <!-- So What I do to use? -->
+      <div
+        class="font-ko-title w-full flex flex-col items-center justify-center text-article"
+      >
+        <p class="text-70px" id="whatIdo-ko">그래서 어떻게 쓰면 된다고요?</p>
+        <div class="flex w-full justify-center">
+          <div class="flex flex-col w-WhatIdo">
+            <lottie-player
+              src="https://assets1.lottiefiles.com/packages/lf20_x6gojhex.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
+            <p class="text-center howTouse">
+              아래의 움직이는 노랭이를 누르고 변환하실 이미지를 고르십시오!
+            </p>
+          </div>
+          <p class="flex items-center text-70px px-3" id="or-ko">또는</p>
+          <div class="flex flex-col w-WhatIdo">
+            <div class="flex items-center justify-center h-WhatIdo">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_zjo2yrxn.json"
+                background="transparent"
+                speed="1"
+                style="width: 150px; height: 150px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+            <p class="text-center howTouse">
+              사진을 드래그해서 이 사이트 아무데나 떨어뜨려주세요!!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- file receiver -->
+      <div class="flex justify-center mt-4">
+        <label
+          for="file"
+          class="bg-yellow-300 hover:bg-yellow-400 font-ko-button rounded-xl ClickMe z-20"
+          >클릭해줘!</label
+        >
+        <input type="file" id="file" multiple hidden />
+      </div>
+      <!-- If you've used joyfully, Share our site! -->
+      <div
+        class="w-full flex flex-col justify-center items-center border-t-2 pt-5"
+      >
+        <p class="font-ko-share text-42px pb-3" id="share-phrases-ko">
+          즐겁게 쓰셨다면, 주위 친구들에게 공유해주세요!
+        </p>
+        <div
+          class="flex justify-between items-center"
+          style="width: 300px; max-height: 60px"
+        >
+          <img
+            src="/svg/Facebook.svg"
+            alt="FacebookShare"
+            class="shareIcon z-20"
+            id="FacebookShare"
+          />
+          <img
+            src="/svg/Twitter.svg"
+            alt="TwitterShare"
+            class="shareIcon z-20"
+            id="TwitterShare"
+          />
+          <img
+            src="/svg/URL.svg"
+            alt="URL"
+            class="shareIcon z-20"
+            id="URLShare"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Lisence -->
+    <div class="w-full flex justify-center items-center">
+      <b
+        >Icon made from
+        <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed
+        by CC BY 3.0</b
+      >
+    </div>
+    <!-- level tooltip -->
+    <div
+      class="fixed top-10 left-10 bg-slate-50 rounded-xl w-52 h-EXPToolTip cursor-grab active:cursor-grabbing z-20 level-tooltip-ko"
+      id="level-tooltip"
+    >
+      <p id="level-indicator" class="pl-3 font-ko-level">Your Level: 1</p>
+      <div class="flex justify-center items-center">
+        <progress class="w-48"></progress>
+      </div>
+      <p class="absolute exp" id="EXP-indicator"></p>
+      <div class="absolute z-20 top-0 left-0 levelTooltipDrag"></div>
+    </div>
+
+    <!-- feature Component -->
+    <div
+      id="feature-Component"
+      class="fixed bg-slate-100 rounded-xl px-5 z-30 hidden"
+    >
+      <div id="feature-Component-title" class="font-ko-title">그이유는..</div>
+      <div
+        id="feature-Component-article"
+        class="bg-white font-ko-article h-80"
+      ></div>
+      <div
+        id="feature-Component-close"
+        class="font-ko-title flex justify-center items-center cursor-pointer w-auto"
+      >
+        닫기
+      </div>
+    </div>
+  </body>
+  <script type="module" src="js/index.js"></script>
+</html>

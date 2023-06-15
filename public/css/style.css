@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 영어폰트 */
+@font-face {
+  font-family: "en-title";
+  src: url("../font/en/Bangers-Regular.ttf");
+}
+@font-face {
+  font-family: "en-button";
+  src: url("../font/en/Anton-Regular.ttf");
+}
+@font-face {
+  font-family: "en-level";
+  src: url("../font/en/YanoneKaffeesatz-Regular.ttf");
+}
+@font-face {
+  font-family: "en-article";
+  src: url("../font/en/Acme-Regular.ttf");
+}
+@font-face {
+  font-family: "en-share";
+  src: url("../font/en/FiraSans-Regular.ttf");
+}
+
+/* 한국어폰트 */
+@font-face {
+  font-family: "ko-title";
+  src: url("../font/ko/VITRO\ CORE\ TTF.ttf");
+}
+@font-face {
+  font-family: "ko-button";
+  src: url("../font/ko/VITRO\ INSPIRE\ TTF.ttf");
+}
+@font-face {
+  font-family: "ko-level";
+  src: url("../font/ko/VITRO\ INSPIRE\ TTF.ttf");
+}
+@font-face {
+  font-family: "ko-article";
+  src: url("../font/ko/VITRO\ INSPIRE\ TTF.ttf");
+}
+@font-face {
+  font-family: "ko-share";
+  src: url("../font/ko/VITRO\ INSPIRE\ TTF.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes move {
+  0% {
+    right: -390px;
+  }
+  50% {
+    right: 390px;
+  }
+  100% {
+    right: -390px;
+  }
+}
+
+.ClickMe {
+  width: 285px;
+  height: 100px;
+  font-size: 50px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: move 7s linear infinite;
+  cursor: pointer;
+}
+
+.ClickMe:hover {
+  animation-play-state: paused;
+}
+
+progress {
+  appearance: none;
+  height: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background: #f0f0f0;
+  border-radius: 0.75rem;
+  box-shadow: inset 10px 3px 10px #ccc;
+}
+progress::-webkit-progress-value {
+  border-radius: 10px;
+  background: rgb(253 224 71);
+}
+
+.exp {
+  left: 90px;
+  top: 35px;
+}
+
+#feature-Component {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 450px;
+
+  transform: translate(-50%, -50%);
+}
+
+#feature-Component-title {
+  width: 460px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#feature-Component-article {
+  overflow-y: auto;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+#feature-Component-close {
+  font-size: 40px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#level-indicator {
+  font-size: 25px;
+}
+
+#feature-Component-article::-webkit-scrollbar {
+  width: 10px;
+}
+#feature-Component-article::-webkit-scrollbar-thumb {
+  background: rgb(100 116 139);
+  border-radius: 20px;
+}
+#feature-Component-article::-webkit-scrollbar-track {
+  background: rgb(148 163 184);
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(253 224 71);
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  display: none;
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}
+
+#level-tooltip::before {
+  content: "Experience increases by 1 for each image conversion";
+  position: absolute;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  top: 120%;
+  padding: 8px 15px;
+  cursor: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+#level-tooltip::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  border-width: 10px;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  cursor: auto;
+}
+
+#level-tooltip:hover::before,
+#level-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.levelTooltipDrag {
+  width: 208px;
+  height: 65px;
+}
+
+.shareIcon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shareIcon:hover {
+  width: 80px;
+  height: 80px;
+}
+
+#congratulations {
+  background-color: white;
+  width: 1000px;
+  height: 100px;
+  top: 55%;
+  opacity: 0;
+  border-radius: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1070px) {
+  #content-container {
+    width: 600px;
+  }
+  #congratulations {
+    width: 600px;
+    font-size: 39px;
+  }
+  /* 영어 */
+  #We-focus-on-speed-en,
+  #feature-explain-en {
+    font-size: 55px;
+  }
+  #share-phrases-en {
+    font-size: 25px;
+  }
+  /* 한국어 */
+  #We-focus-on-speed-ko,
+  #feature-explain-ko {
+    font-size: 34px;
+  }
+  #share-phrases-ko {
+    font-size: 30px;
+  }
+  #whatIdo-ko {
+    font-size: 42px;
+  }
+  #or-ko {
+    font-size: 33px;
+    width: 102px;
+    justify-content: center;
+  }
+  .drop-area-ko {
+    font-size: 70px;
+  }
+  .howTouse {
+    font-size: 25px;
+  }
+
+  @keyframes move {
+    0% {
+      right: -160px;
+    }
+    50% {
+      right: 160px;
+    }
+    100% {
+      right: -160px;
+    }
+  }
+  .ClickMe {
+    animation-duration: 4s;
+  }
+}
